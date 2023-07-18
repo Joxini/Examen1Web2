@@ -45,11 +45,11 @@ export class Vehiculo {
     @JoinColumn({ name: 'id_marca' })
     marcas: Marca;
 
-    @ManyToOne(() => Tipo_Vehiculo, (tipo) => tipo.vehiculos)
-    @JoinTable({name: 'id_TipoVehiculo'})
+    @ManyToOne(() => Tipo_Vehiculo, (tipo) => tipo.vehiculo)
+    @JoinColumn({name: 'id_TipoVehiculo'})
     TiposVehiculos: Tipo_Vehiculo;
 
     @ManyToOne(() => Color, (color) => color.vehiculos)
-    @JoinTable({name: 'id_color'})
+    @JoinColumn({name: 'id_color'})
     colores: Color;
 }

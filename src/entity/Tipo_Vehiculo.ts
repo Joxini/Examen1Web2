@@ -17,5 +17,5 @@ export class Tipo_Vehiculo {
     estado: boolean;
 
     @OneToMany(() => Vehiculo, (Vehiculo) => Vehiculo.TiposVehiculos,  {cascade: true})
-    vehiculos: Vehiculo[]
+    vehiculo: Vehiculo[]
 }
