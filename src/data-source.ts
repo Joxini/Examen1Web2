@@ -15,6 +15,7 @@ export const AppDataSource = new DataSource({
     database: "bdExamen",
     synchronize: false,
     logging: false,
+     //le ponemos las entidades para que las cree cuando subamos el api
     entities: [Vehiculo,Color,Marca,Tipo_Vehiculo],
     migrations: [],
     subscribers: [],

@@ -3,12 +3,12 @@ import ColorController from "../controller/ColorController";
 
 const routes = Router();
 
+//Rutas hacias los respectivos controladores.
 routes.get("", ColorController.getAll);
-//Para que determine que es paracmetro, ponemos los dos :
-routes.get("/getById/:id", ColorController.getById);
-//Para poder agregar un dato a la base de datos, desde el postman
+routes.get("/:id", ColorController.getById);
 routes.post("", ColorController.add);
 routes.patch("", ColorController.update);
-routes.delete("", ColorController.delete);
+routes.delete("/:id", ColorController.delete);
 
+//Exportamos la constante, para que las demas la puedan acceder.
 export default routes;

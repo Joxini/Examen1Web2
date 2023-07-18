@@ -7,6 +7,7 @@ import Color from "./Colores";
 
 const routes = Router();
 
+//Ruta de cada entidad.
 routes.use('/Vehiculo',Vehiculo);
 routes.use('/TipoVehiculo', Tipo_Vehiculo);
 routes.use('/Marca',Marca);

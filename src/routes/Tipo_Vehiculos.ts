@@ -3,12 +3,12 @@ import TipoVehiculoController from "../controller/Tipo_Vehiculo_Controller";
 
 const routes = Router();
 
+
+//Rutas hacia los controladores respectivos.
 routes.get("", TipoVehiculoController.getAll);
-//Para que determine que es paracmetro, ponemos los dos :
-routes.get("/getById/:id", TipoVehiculoController.getById);
-//Para poder agregar un dato a la base de datos, desde el postman
+routes.get("/:id", TipoVehiculoController.getById);
 routes.post("", TipoVehiculoController.add);
 routes.patch("", TipoVehiculoController.update);
-routes.delete("", TipoVehiculoController.delete);
+routes.delete("/:id", TipoVehiculoController.delete);
 
 export default routes;
